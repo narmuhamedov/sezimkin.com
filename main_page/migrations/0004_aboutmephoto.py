@@ -4,17 +4,29 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main_page', '0003_aboutme'),
+        ("main_page", "0003_aboutme"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='AboutMEPhoto',
+            name="AboutMEPhoto",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image_about', models.ImageField(upload_to='aboutMe', verbose_name='Добавьте фото в Блог о себе')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "image_about",
+                    models.ImageField(
+                        upload_to="aboutMe", verbose_name="Добавьте фото в Блог о себе"
+                    ),
+                ),
             ],
         ),
     ]

@@ -4,46 +4,81 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main_page', '0005_target'),
+        ("main_page", "0005_target"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Contact',
+            name="Contact",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('instagram', models.URLField(verbose_name='Укажите ссылку на Instagram')),
-                ('telegram', models.URLField(verbose_name='Укажите ссылку на Telegram')),
-                ('whatsapp', models.URLField(verbose_name='Укажите ссылку на Whatsapp')),
-                ('address', models.CharField(max_length=300, verbose_name='Укажите город проживания')),
-                ('email', models.EmailField(max_length=254, verbose_name='Укажите вашу почту')),
-                ('number', models.CharField(max_length=15, verbose_name='Укажите ваш номер')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "instagram",
+                    models.URLField(verbose_name="Укажите ссылку на Instagram"),
+                ),
+                (
+                    "telegram",
+                    models.URLField(verbose_name="Укажите ссылку на Telegram"),
+                ),
+                (
+                    "whatsapp",
+                    models.URLField(verbose_name="Укажите ссылку на Whatsapp"),
+                ),
+                (
+                    "address",
+                    models.CharField(
+                        max_length=300, verbose_name="Укажите город проживания"
+                    ),
+                ),
+                (
+                    "email",
+                    models.EmailField(
+                        max_length=254, verbose_name="Укажите вашу почту"
+                    ),
+                ),
+                (
+                    "number",
+                    models.CharField(max_length=15, verbose_name="Укажите ваш номер"),
+                ),
             ],
             options={
-                'verbose_name': 'контактные данные',
-                'verbose_name_plural': 'Контакты',
+                "verbose_name": "контактные данные",
+                "verbose_name_plural": "Контакты",
             },
         ),
         migrations.AlterModelOptions(
-            name='aboutme',
-            options={'verbose_name': 'информацию о себе', 'verbose_name_plural': 'Обо мне'},
+            name="aboutme",
+            options={
+                "verbose_name": "информацию о себе",
+                "verbose_name_plural": "Обо мне",
+            },
         ),
         migrations.AlterModelOptions(
-            name='aboutmephoto',
-            options={'verbose_name': 'название фото', 'verbose_name_plural': 'Фото в вкладке о себе'},
+            name="aboutmephoto",
+            options={
+                "verbose_name": "название фото",
+                "verbose_name_plural": "Фото в вкладке о себе",
+            },
         ),
         migrations.AlterModelOptions(
-            name='logo',
-            options={'verbose_name': 'логотип', 'verbose_name_plural': 'Логотип'},
+            name="logo",
+            options={"verbose_name": "логотип", "verbose_name_plural": "Логотип"},
         ),
         migrations.AlterModelOptions(
-            name='slider',
-            options={'verbose_name': 'фото', 'verbose_name_plural': 'Галерея'},
+            name="slider",
+            options={"verbose_name": "фото", "verbose_name_plural": "Галерея"},
         ),
         migrations.AlterModelOptions(
-            name='target',
-            options={'verbose_name': 'цель', 'verbose_name_plural': 'Мои цели'},
+            name="target",
+            options={"verbose_name": "цель", "verbose_name_plural": "Мои цели"},
         ),
     ]

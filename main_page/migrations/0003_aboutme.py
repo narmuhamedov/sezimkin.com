@@ -4,19 +4,35 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main_page', '0002_logo'),
+        ("main_page", "0002_logo"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='AboutME',
+            name="AboutME",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('text_hobby', models.TextField(verbose_name='Напишите блог о своих увлечениях')),
-                ('text_work', models.TextField(verbose_name='Напишите блог о своей работе')),
-                ('text_secret', models.TextField(verbose_name='Напишите блог о ваших секретах')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "text_hobby",
+                    models.TextField(verbose_name="Напишите блог о своих увлечениях"),
+                ),
+                (
+                    "text_work",
+                    models.TextField(verbose_name="Напишите блог о своей работе"),
+                ),
+                (
+                    "text_secret",
+                    models.TextField(verbose_name="Напишите блог о ваших секретах"),
+                ),
             ],
         ),
     ]
